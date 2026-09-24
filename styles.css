@@ -1,0 +1,77 @@
+:root {
+  color-scheme: light;
+  --paper: #f8f9f7;
+  --surface: #ffffff;
+  --ink: #18253b;
+  --muted: #57667c;
+  --blue: #315bd5;
+  --blue-deep: #2448ad;
+  --line: #dfe5ec;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.65;
+}
+a { color: var(--blue-deep); text-underline-offset: .18em; }
+a:hover { color: var(--blue); }
+a:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; border-radius: 3px; }
+.shell { width: min(100% - 48px, 1080px); margin-inline: auto; }
+.site-header { border-bottom: 1px solid var(--line); }
+.site-header .shell { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.brand { color: var(--ink); font-size: 1.1rem; font-weight: 720; letter-spacing: -.035em; text-decoration: none; white-space: nowrap; }
+.nav { display: flex; flex-wrap: wrap; gap: 10px 26px; font-size: .92rem; }
+.nav a { color: var(--muted); text-decoration: none; }
+.nav a:hover, .nav a[aria-current="page"] { color: var(--blue-deep); }
+.root-main { min-height: calc(100dvh - 150px); display: grid; align-content: center; padding-block: 88px; }
+.eyebrow { margin: 0 0 16px; color: var(--blue-deep); font-size: .76rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+h1, h2, h3 { line-height: 1.13; letter-spacing: -.04em; }
+h1 { margin: 0; font-size: clamp(3.4rem, 9vw, 6.8rem); font-weight: 720; }
+.root-intro { max-width: 36rem; margin: 22px 0 40px; color: var(--muted); font-size: clamp(1.15rem, 2.3vw, 1.45rem); }
+.text-link { display: inline-flex; align-items: center; gap: 12px; font-weight: 650; text-decoration: none; }
+.text-link::after { content: "↗"; font-size: 1.1em; }
+.hero { padding-block: clamp(88px, 13vw, 156px) 104px; }
+.hero h1 { max-width: 850px; }
+.hero .zh { display: block; margin-top: 18px; color: var(--blue-deep); font-size: clamp(1.45rem, 3vw, 2.2rem); font-weight: 560; letter-spacing: -.045em; }
+.hero-copy { max-width: 650px; margin: 32px 0 0; color: var(--muted); font-size: clamp(1.13rem, 2vw, 1.37rem); line-height: 1.85; }
+.product-section { border-top: 1px solid var(--line); padding-block: 64px 78px; }
+.section-grid { display: grid; grid-template-columns: minmax(180px, .65fr) minmax(0, 1.35fr); gap: clamp(30px, 8vw, 100px); }
+.section-grid h2 { margin: 0; font-size: 1.6rem; }
+.feature-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 40px; margin: 0; padding: 0; list-style: none; }
+.feature-list li { padding: 16px 0; border-top: 1px solid var(--line); font-size: 1.08rem; }
+.disclosure { max-width: 620px; margin: 0; color: var(--muted); font-size: 1.05rem; }
+.disclosure + .disclosure { margin-top: 18px; }
+.site-footer { border-top: 1px solid var(--line); color: var(--muted); }
+.site-footer .shell { min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 16px; font-size: .9rem; }
+.site-footer p { margin: 0; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 10px 24px; }
+.content-page { width: min(100% - 48px, 720px); margin: 0 auto; padding-block: 72px 110px; }
+.content-page h1 { font-size: clamp(2.55rem, 6vw, 4.1rem); }
+.page-lead { margin: 18px 0 52px; color: var(--muted); font-size: 1.08rem; }
+.policy { overflow-wrap: anywhere; }
+.policy h2 { margin: 54px 0 18px; font-size: 1.55rem; }
+.policy p { margin: 0 0 18px; }
+.policy ul { padding-left: 1.4rem; }
+.policy li { margin: 8px 0; }
+.policy code { font-size: .92em; background: #edf1f5; padding: .13em .34em; border-radius: 4px; }
+.support-topics { margin: 0 0 36px; padding-left: 1.3rem; }
+.support-topics li { margin: 8px 0; }
+.contact-block { border-top: 1px solid var(--line); padding-top: 28px; }
+.contact-block p { margin: 0 0 10px; }
+@media (max-width: 680px) {
+  .shell, .content-page { width: min(100% - 36px, 1080px); }
+  .site-header .shell { min-height: 68px; align-items: flex-start; flex-direction: column; justify-content: center; padding-block: 13px; gap: 6px; }
+  .nav { gap: 8px 18px; }
+  .root-main { min-height: calc(100dvh - 150px); }
+  .hero { padding-block: 78px 80px; }
+  .section-grid { grid-template-columns: 1fr; gap: 26px; }
+  .feature-list { grid-template-columns: 1fr; }
+  .site-footer .shell { align-items: flex-start; flex-direction: column; padding-block: 22px; }
+  .content-page { padding-block: 56px 85px; }
+}

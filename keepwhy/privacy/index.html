@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="KeepWhy Privacy Policy.">
+  <link rel="canonical" href="https://ryanchenxr.github.io/keepwhy/privacy/">
+  <title>KeepWhy Privacy Policy</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header"><div class="shell"><a class="brand" href="/keepwhy/">KeepWhy</a><nav class="nav" aria-label="KeepWhy"><a href="/keepwhy/privacy/" aria-current="page">Privacy Policy</a><a href="/keepwhy/support/">Support</a></nav></div></header>
+  <main class="content-page policy">
+    <p class="eyebrow">Privacy</p>
+    <h1>KeepWhy Privacy Policy</h1>
+    <p class="page-lead">Last updated: <time datetime="2026-09-24">September 24, 2026</time></p>
+    <p><strong>Product:</strong> KeepWhy, a Chrome extension by Ryan Chen. <strong>Privacy Policy URL:</strong> <a href="https://ryanchenxr.github.io/keepwhy/privacy/">https://ryanchenxr.github.io/keepwhy/privacy/</a>.</p>
+
+    <h2>Purpose and local data</h2>
+    <p>KeepWhy helps you record why you saved a webpage, organize that bookmark, and find it later by keyword or description. It has no account and no developer-operated bookmark sync/cloud backend. KeepWhy stores its bookmark records and AI settings in your browser's <code>chrome.storage.local</code>; a temporary panel token uses <code>chrome.storage.session</code>. Local records may contain URL, title, domain, your reason, Chrome bookmark IDs and folder paths, timestamps, category, tags, search hints, field-source information, and AI processing status. AI-generated category, tags, and search hints are optional. Search queries are processed locally and are not stored as a separate search history by KeepWhy.</p>
+    <p>When you click the toolbar icon on a normal webpage, KeepWhy reads that tab's URL, title and favicon URL to show the save panel. It does not collect browsing history or automatically monitor pages. It reads existing Chrome bookmarks to search them and to reuse matching bookmarks; it may create a Chrome bookmark when you save or restore a record. It does not automatically move, rename, or delete old Chrome bookmarks. The current implementation does not extract page body text or meta descriptions.</p>
+
+    <h2>Optional AI and API Key</h2>
+    <p>You may configure your own compatible AI provider, API Base URL, API Key, and model. The API Key is stored in <code>chrome.storage.local</code>; extension code reads it to authenticate requests directly to your selected provider. It is not sent to a KeepWhy developer-operated server and is not included in a KeepWhy backup export. Provider host access is optional at installation; clicking Connect requests only the origin of the URL you entered and sends the Key to its <code>/models</code> endpoint. This includes a user-selected local OpenAI-compatible provider at <code>http://localhost</code> or <code>http://127.0.0.1</code>. Saving AI configuration sends a fixed verification message to <code>/chat/completions</code>.</p>
+    <p>The AI configuration screen discloses these optional transmissions before connection. When AI enrichment is enabled, KeepWhy sends the saved page's title, URL, domain, your reason, and existing category/tag vocabulary to that provider for classification, tags, and search hints. A repair attempt may include a limited excerpt of the provider's preceding invalid answer. When you explicitly submit a search with low local confidence, it sends the current query and a small category/tag vocabulary to the provider for query expansion; it does not send the full bookmark library. AI output returns to KeepWhy and is used only as structured data for local organization/search. Without an AI configuration, saving, Chrome bookmark reuse, local search, Settings, and backup remain usable.</p>
+    <p>The provider is a separate third party with its own data practices. Review its terms and privacy policy before connecting. KeepWhy does not control a provider's retention or use of data sent to it. Normal browser navigation to a saved website or About link follows that site's own policies.</p>
+
+    <h2>Backup, deletion, and security</h2>
+    <p>Export creates a JSON file on your device containing KeepWhy-managed bookmarks, including URLs, titles, reasons and optional metadata. It excludes AI settings, API Key, Chrome bookmark IDs, and runtime errors. Treat this file as personal data and choose where to store or share it. Import reads a file you select, previews counts, then merges by canonical URL after confirmation; it may create Chrome bookmarks if no match exists. Import does not automatically invoke AI.</p>
+    <p>Removing the extension removes its extension-local storage under Chrome's normal extension lifecycle. Chrome-native bookmarks and backup files you exported are separate and may remain; manage them in Chrome or your file storage. KeepWhy does not promise encryption beyond the browser and operating system storage controls. Provider calls use HTTPS for remote services; HTTP is allowed only for a user-selected localhost or 127.0.0.1 provider. Keep your API Key and exported backups private.</p>
+
+    <h2>Limited Use</h2>
+    <p>KeepWhy uses data obtained through Chrome permissions only for its disclosed bookmark saving, organization, retrieval, optional AI, and backup features. It does not sell user data or transfer it to data brokers, does not use it for personalized or interest-based advertising, and does not provide a developer-operated server through which Ryan Chen can read your local bookmark data. Any information obtained from Google APIs is used and transferred in accordance with the Chrome Web Store User Data Policy, including its Limited Use requirements. KeepWhy does not permit human access to user data except where the policy allows it, such as a specific support request with the user's consent or a legal/security obligation. Optional provider transmissions described above are necessary for the AI features you choose to use.</p>
+
+    <h2>Changes and contact</h2>
+    <p>This policy describes the current V0.1 implementation. Material changes to data practices will be disclosed before the changed version is published.</p>
+    <ul>
+      <li><strong>Creator:</strong> Ryan Chen</li>
+      <li><strong>X:</strong> <a href="https://x.com/ryanchenxr" target="_blank" rel="noopener noreferrer">https://x.com/ryanchenxr</a></li>
+      <li><strong>Support:</strong> <a href="https://ryanchenxr.github.io/keepwhy/support/">https://ryanchenxr.github.io/keepwhy/support/</a></li>
+    </ul>
+    <p>For questions or privacy requests, use the public support or X links above. Do not post API Keys or private bookmark data in a public issue.</p>
+    <p>Policy reference: <a href="https://developer.chrome.com/docs/webstore/user_data" target="_blank" rel="noopener noreferrer">Chrome Web Store User Data Policy</a>.</p>
+  </main>
+  <footer class="site-footer"><div class="shell"><p>KeepWhy</p><nav class="footer-links" aria-label="Footer"><a href="/keepwhy/">Product</a><a href="/keepwhy/support/">Support</a></nav></div></footer>
+</body>
+</html>
