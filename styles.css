@@ -34,12 +34,19 @@ a:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; border-ra
 h1, h2, h3 { line-height: 1.13; letter-spacing: -.04em; }
 h1 { margin: 0; font-size: clamp(3.4rem, 9vw, 6.8rem); font-weight: 720; }
 .root-intro { max-width: 36rem; margin: 22px 0 40px; color: var(--muted); font-size: clamp(1.15rem, 2.3vw, 1.45rem); }
+.root-store { margin: 8px 0 0; font-size: .9rem; }
+.root-store a { color: var(--muted); text-decoration: none; }
+.root-store a:hover { color: var(--blue-deep); }
 .text-link { display: inline-flex; align-items: center; gap: 12px; font-weight: 650; text-decoration: none; }
 .text-link::after { content: "↗"; font-size: 1.1em; }
-.hero { padding-block: clamp(88px, 13vw, 156px) 104px; }
+.hero { padding-block: clamp(72px, 7vw, 104px) 104px; }
 .hero h1 { max-width: 850px; }
 .hero .zh { display: block; margin-top: 18px; color: var(--blue-deep); font-size: clamp(1.45rem, 3vw, 2.2rem); font-weight: 560; letter-spacing: -.045em; }
 .hero-copy { max-width: 650px; margin: 32px 0 0; color: var(--muted); font-size: clamp(1.13rem, 2vw, 1.37rem); line-height: 1.85; }
+.hero-install { margin-top: 32px; }
+.store-button { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 9px 23px; border-radius: 10px; background: var(--blue); color: #fff; font-size: .98rem; font-weight: 650; text-decoration: none; }
+.store-button:hover { background: var(--blue-deep); color: #fff; }
+.store-meta { margin: 9px 0 0; color: var(--muted); font-size: .83rem; }
 .product-section { border-top: 1px solid var(--line); padding-block: 64px 78px; }
 .section-grid { display: grid; grid-template-columns: minmax(180px, .65fr) minmax(0, 1.35fr); gap: clamp(30px, 8vw, 100px); }
 .section-grid h2 { margin: 0; font-size: 1.6rem; }
@@ -62,6 +69,7 @@ h1 { margin: 0; font-size: clamp(3.4rem, 9vw, 6.8rem); font-weight: 720; }
 .policy code { font-size: .92em; background: #edf1f5; padding: .13em .34em; border-radius: 4px; }
 .support-topics { margin: 0 0 36px; padding-left: 1.3rem; }
 .support-topics li { margin: 8px 0; }
+.support-store { margin: 0 0 34px; font-size: .95rem; }
 .contact-block { border-top: 1px solid var(--line); padding-top: 28px; }
 .contact-block p { margin: 0 0 10px; }
 @media (max-width: 680px) {
